@@ -1,8 +1,8 @@
-import 'package:firbase_project/core/models/user_model.dart';
-import 'package:firbase_project/features/auth/presentation/view_model/auth.cubit.dart';
-import 'package:firbase_project/features/auth/presentation/view_model/auth_state.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../view_model/auth.cubit.dart';
+import '../../view_model/auth_state.dart';
 
 class UserSignupScreen extends StatelessWidget {
   const UserSignupScreen({super.key});

@@ -1,10 +1,6 @@
-import 'package:firbase_project/core/models/user_model.dart';
-// import 'package:firbase_project/features/auth/presentation/view/pages/admin_login_screen.dart';
-// import 'package:firbase_project/features/auth/presentation/view/pages/user_login_screen.dart';
-import 'package:firbase_project/features/auth/presentation/view/widgets/role_card_widget.dart';
-// import 'package:firbase_project/features/auth/presentation/view_model/auth.cubit.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../widgets/role_card_widget.dart';
 
 class RoleSelectionScreen extends StatelessWidget {
   const RoleSelectionScreen({super.key});

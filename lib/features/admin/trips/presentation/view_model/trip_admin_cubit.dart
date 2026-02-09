@@ -11,10 +11,7 @@ class TripAdminCubit extends Cubit<TripAdminState> {
 
   TripAdminCubit(this.repository) : super(TripAdminInitial());
 
-    // trips from firebase
-
-    // bookings from firebase
-
+  // trips from firebase
   final List<TripModel>  trips = [
       TripModel(
         id: '1',
@@ -59,7 +56,6 @@ class TripAdminCubit extends Cubit<TripAdminState> {
         createdBy: '',
       ),
     ];
-
   late final int totalTrips = trips.length;
   late final totalRevenue = trips.fold(0, (sum, t) => sum + t.price);
   late final List<Booking> bookings = [

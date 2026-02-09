@@ -1,7 +1,8 @@
-import 'package:firbase_project/features/auth/presentation/view/pages/user_home_screen.dart';
-import 'package:firbase_project/features/auth/presentation/view_model/auth.cubit.dart';
+import 'package:app1/features/auth/presentation/view/pages/user_home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+
+import '../../view_model/auth.cubit.dart';
 
 class UserProfileScreen extends StatelessWidget {
   const UserProfileScreen({super.key});
