@@ -45,7 +45,7 @@ class TripCard extends StatelessWidget {
 
           const SizedBox(height: 8),
 
-          Text("${trip.dateTime}",
+          Text("${trip.bookedAt}",
               style: AppTextStyles.smallRegular),
 
           const SizedBox(height: 14),
