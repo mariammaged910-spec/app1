@@ -1,4 +1,5 @@
-import 'package:firbase_project/features/auth/presentation/view_model/auth.cubit.dart';
+import 'package:app1/core/utils/app_colors.dart';
+import 'package:app1/features/auth/presentation/view_model/auth.cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'user_profile_screen.dart';
@@ -33,9 +34,9 @@ class UserHomeScreen extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Icon(
-              Icons.travel_explore,
+              Icons.airplanemode_active_outlined,
               size: 80,
-              color: Color(0xFF34A853),
+              color: AppColors.pasteLavender,
             ),
             SizedBox(height: 20),
             Text(

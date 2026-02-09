@@ -1,5 +1,5 @@
-import 'package:firbase_project/core/models/user_model.dart';
-import 'package:firbase_project/features/auth/data/repo/firebase_repo.dart';
+import 'package:app1/core/models/user_model.dart';
+import 'package:app1/features/auth/data/repo/firebase_repo.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'auth_state.dart';
 

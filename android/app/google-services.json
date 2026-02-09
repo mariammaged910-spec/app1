@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "24907212436",
+    "project_id": "travel-poject",
+    "storage_bucket": "travel-poject.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24907212436:android:77d59b70bb9bd8e88d3681",
+        "android_client_info": {
+          "package_name": "com.example.app1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu3ZJ-bKRBPLTcqsfIlEE7fJVbKx6YYvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24907212436:android:3618c0042149d0b68d3681",
+        "android_client_info": {
+          "package_name": "com.example.firbase_project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu3ZJ-bKRBPLTcqsfIlEE7fJVbKx6YYvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:24907212436:android:2a77d1e2cb5be9c78d3681",
+        "android_client_info": {
+          "package_name": "com.example.task_login_nti"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDu3ZJ-bKRBPLTcqsfIlEE7fJVbKx6YYvo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

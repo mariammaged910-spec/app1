@@ -1,10 +1,7 @@
-import 'package:firbase_project/core/models/user_model.dart';
-// import 'package:firbase_project/features/auth/presentation/view/pages/admin_login_screen.dart';
-// import 'package:firbase_project/features/auth/presentation/view/pages/user_login_screen.dart';
-import 'package:firbase_project/features/auth/presentation/view/widgets/role_card_widget.dart';
-// import 'package:firbase_project/features/auth/presentation/view_model/auth.cubit.dart';
+import 'package:app1/core/models/user_model.dart';
+import 'package:app1/core/utils/app_colors.dart';
+import 'package:app1/features/auth/presentation/view/widgets/role_card_widget.dart';
 import 'package:flutter/material.dart';
-// import 'package:flutter_bloc/flutter_bloc.dart';
 
 class RoleSelectionScreen extends StatelessWidget {
   const RoleSelectionScreen({super.key});
@@ -18,8 +15,8 @@ class RoleSelectionScreen extends StatelessWidget {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
-              Color(0xFF667eea),
-              Color(0xFF764ba2),
+              AppColors.babyPeach,
+              AppColors.babyPeach,
             ],
           ),
         ),
@@ -30,18 +27,27 @@ class RoleSelectionScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 const SizedBox(height: 40),
-                const Icon(
-                  Icons.travel_explore,
-                  size: 80,
-                  color: Colors.white,
+                Container(
+                  width: 130,
+                  height: 130,
+                  decoration: BoxDecoration(
+                    color: AppColors.secondaryGradient,
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  child: Icon(
+                    // Icons.connecting_airports_sharp,
+                    Icons.airplanemode_active_outlined,
+                    size: 80,
+                    color: AppColors.babyMint,
+                  ),
                 ),
                 const SizedBox(height: 20),
                 const Text(
-                  'TravelEase',
+                  'TravelX',
                   style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
-                    color: Colors.white,
+                    color: AppColors.textPrimary,
                     fontFamily: 'Montserrat',
                   ),
                 ),
@@ -50,7 +56,7 @@ class RoleSelectionScreen extends StatelessWidget {
                   'Your journey begins here',
                   style: TextStyle(
                     fontSize: 18,
-                    color: Colors.white70,
+                    color: AppColors.textPrimary,
                     fontFamily: 'Roboto',
                   ),
                 ),
@@ -58,22 +64,24 @@ class RoleSelectionScreen extends StatelessWidget {
                 
                 RoleCard(
                   // context,
-                  icon: Icons.person,
+                  icon: Icons.person_outline,
                   title: 'Continue as User',
                   subtitle: 'Book trips, manage bookings',
                   role: UserRole.user,
-                  iconColor: const Color(0xFF34A853),
+                  // color: AppColors.pastelBlue,
+                  // iconColor: const Color(0xFF34A853),
                 ),
                 
                 const SizedBox(height: 20),
                 
                 RoleCard(
                   // context,
-                  icon: Icons.admin_panel_settings,
+                  icon: Icons.admin_panel_settings_outlined,
                   title: 'Continue as Admin',
                   subtitle: 'Manage trips, users, and bookings',
                   role: UserRole.admin,
-                  iconColor: const Color(0xFF4285F4),
+                  // color: AppColors.pastelPink,
+                  // iconColor: const Color(0xFF4285F4),
                 ),
                 
                 const SizedBox(height: 40),
@@ -85,7 +93,7 @@ class RoleSelectionScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 12,
-                      color: Colors.white,
+                    color: AppColors.textPrimary,
                     ),
                   ),
                 ),

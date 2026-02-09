@@ -1,5 +1,6 @@
-import 'package:firbase_project/features/auth/presentation/view/pages/user_home_screen.dart';
-import 'package:firbase_project/features/auth/presentation/view_model/auth.cubit.dart';
+import 'package:app1/core/utils/app_colors.dart';
+import 'package:app1/features/auth/presentation/view/pages/user_home_screen.dart';
+import 'package:app1/features/auth/presentation/view_model/auth.cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -19,9 +20,16 @@ class UserProfileScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Profile'),
+        title: const Text('Profile',
+        style: TextStyle(
+        color: Colors.white,
+        fontSize: 22,
+        fontWeight: FontWeight.bold
+      ),),
+        backgroundColor: AppColors.pastelPeach, 
         leading: IconButton(
           icon: const Icon(Icons.arrow_back),
+          color: Colors.white,
           onPressed: () {
             Navigator.pushReplacement(
               context,
@@ -35,11 +43,19 @@ class UserProfileScreen extends StatelessWidget {
           children: [
             Container(
               height: 200,
+              // color: AppColors.pastelPeach,
+              // decoration: BoxDecoration(
+              //   gradient: LinearGradient(
+              //     colors: [ AppColors.babyPeach, AppColors.pastelPeach ],
+              //     begin: Alignment.topCenter,
+              //     end: Alignment.bottomCenter,
+              //   ),
+              // ),
               decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  colors: [Color(0xFF34A853), Color(0xFF0D652D)],
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
+                color: AppColors.pastelPeach,
+                borderRadius: BorderRadius.only(
+                  bottomLeft: Radius.circular(25),
+                  bottomRight: Radius.circular(25),
                 ),
               ),
               child: Center(
@@ -48,13 +64,13 @@ class UserProfileScreen extends StatelessWidget {
                   children: [
                     CircleAvatar(
                       radius: 50,
-                      backgroundColor: Colors.white,
+                      backgroundColor: Colors.white.withOpacity(0.4),
                       child: Text(
                         user.name[0].toUpperCase(),
                         style:  TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.bold,
-                          color: Color(0xFF34A853),
+                          color: Colors.white,
                         ),
                       ),
                     ),
@@ -172,9 +188,9 @@ class UserProfileScreen extends StatelessWidget {
                         Navigator.pushReplacementNamed(context, '/');
                       },
                       icon: const Icon(Icons.logout),
-                      label: const Text('Logout'),
+                      label: const Text('Logout', style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.red,
+                        backgroundColor: AppColors.pastelPeach,
                         foregroundColor: Colors.white,
                         padding: const EdgeInsets.symmetric(vertical: 16),
                         shape: RoundedRectangleBorder(
@@ -239,7 +255,7 @@ class UserProfileScreen extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: color,
+                // color: color,
                 borderRadius: BorderRadius.circular(8),
               ),
               child: Icon(icon, color: color),
