@@ -2,6 +2,7 @@ import 'package:app1/core/utils/app_colors.dart';
 import 'package:app1/features/auth/presentation/view_model/auth.cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import '../../view_model/auth.cubit.dart';
 import 'user_profile_screen.dart';
 
 class UserHomeScreen extends StatelessWidget {
