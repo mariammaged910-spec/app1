@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 
 class AppColors {
 
+  // App Bar Color
+  static const Color primary = Color(0xFFB0DFE0);
+
+
   // Primary Colors
   static const Color pastelBlue = Color(0xFFA8D8EA);
   static const Color pastelMint = Color(0xFFB8E6D5);

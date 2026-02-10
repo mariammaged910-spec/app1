@@ -3,19 +3,18 @@ import '../../../../../core/utils/app_colors.dart';
 import '../../../../../core/utils/text_style.dart';
 
 class AppBarWidget extends StatelessWidget {
-  const AppBarWidget({super.key});
+  final String text;
+  final String des;
+  final IconData icon;
+  const AppBarWidget({required this.text, required this.icon ,this.des="", super.key});
 
   @override
   Widget build(BuildContext context){
     double height = MediaQuery.of(context).size.height;
 
     return AppBar(
-      flexibleSpace: Container(
-        decoration: BoxDecoration(
-          gradient: AppColors.primaryGradient,
-        ),
-      ),
-      toolbarHeight: 0.4 * height,
+      backgroundColor: AppColors.primary,
+      toolbarHeight: 0.2* height,
       automaticallyImplyLeading: false,
       title: Padding(
         padding: const EdgeInsets.all(8),
@@ -26,8 +25,8 @@ class AppBarWidget extends StatelessWidget {
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text("Discover Egypt", style: AppTextStyles.h1Display.copyWith(color: AppColors.surface,),),
-                Text("Plan your next adventure", style: AppTextStyles.smallRegular.copyWith(color: AppColors.surface,),)
+                Text(text, style: AppTextStyles.h1Display.copyWith(color: AppColors.surface,),),
+                Text(des, style: AppTextStyles.smallRegular.copyWith(color: AppColors.surface,),)
               ],
             ),
             Spacer(),
@@ -36,7 +35,7 @@ class AppBarWidget extends StatelessWidget {
               radius: 30,
               child: IconButton(
                   onPressed: (){},
-                  icon: Icon(Icons.person_outline, color: AppColors.surface, )
+                  icon: Icon(icon, color: AppColors.surface, )
               ),)
           ],
         ),
