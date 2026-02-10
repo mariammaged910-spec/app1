@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../../../../core/utils/app_colors.dart';
-import '../../../../home/presentation/view/pages/trips_screen.dart';
 import '../widgets/bottom_nav_bar.dart';
-// import 'home_screen.dart';
+import 'home_screen.dart';
 import 'profile_screen.dart';
 import 'user_trips_screen.dart';
 
@@ -38,7 +37,7 @@ class _HomePageState extends State<HomePage> {
 
 
 List<Widget> tabs = [
-  // HomeScreen(),
-  TripsScreen(),
+  HomeScreen(),
+  UserTripsScreen(),
   ProfileScreen(),
 ];
