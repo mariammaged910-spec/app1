@@ -1,4 +1,5 @@
-import 'package:firbase_project/core/models/user_model.dart';
+import 'package:app1/core/models/user_model.dart';
+import 'package:app1/features/admin/trips/data/models/trip_model.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -152,6 +153,104 @@ class AuthRepository {
       return {'success': false, 'error': 'Failed to create account'};
     }
   }
+
+
+
+
+
+
+  final CollectionReference _tripsCollection = 
+      FirebaseFirestore.instance.collection('trips');
+
+  Future<Map<String, dynamic>> addTrip({
+    required String destination,
+    required String origin,
+    required int totalSeats,
+    required String paymentMethod,
+    required TripStatus status,
+    required int price,
+    required int availableSeats,
+    required String description,
+    required String createdBy,
+  }) async {
+    try {
+      final tripId = _tripsCollection.doc().id;
+      
+      final trip = TripModel(
+        id: tripId,
+        destination: destination,
+        origin: origin,
+        totalSeats: availableSeats,
+        paymentMethod: paymentMethod,
+        status: status,
+        price: price,
+        availableSeats: availableSeats,
+        description: description,
+        startDate: DateTime.now(),
+        createdBy: createdBy,
+      );
+
+      await _tripsCollection.doc(tripId).set(trip.toMap());
+
+      return {'success': true, 'trip': trip};
+    } catch (error) {
+      return {'success': false, 'error': error.toString()};
+    }
+  }
+
+  Future<List<TripModel>> getTrips() async {
+    try {
+      final querySnapshot = await _tripsCollection
+          .where('isActive', isEqualTo: true)
+          .orderBy('startDate')
+          .get();
+
+      return querySnapshot.docs
+          .map((doc) => TripModel.fromMap(doc.data() as Map<String, dynamic>))
+          .toList();
+    } catch (_) {
+      return [];
+    }
+  }
+
+  Future<TripModel?> getTripById(String tripId) async {
+    try {
+      final doc = await _tripsCollection.doc(tripId).get();
+      if (doc.exists) {
+        return TripModel.fromMap(doc.data() as Map<String, dynamic>);
+      }
+      return null;
+    } catch (_) {
+      return null;
+    }
+  }
+
+  Future<void> updateTripSeats(String tripId, int newSeats) async {
+    await _tripsCollection.doc(tripId).update({
+      'availableSeats': newSeats,
+    });
+  }
+
+
+  // Future<void> Trip ({}) async{
+  //   try{
+  //   await firestore
+  //         .collection('users')
+  //         .doc(user.uid)
+  //         .set(userModel.toMap());
+
+  //     return {'success': true, 'user': userModel};
+  //   } catch (error) {
+  //     return {'success': false, 'error': error.toString()};
+  //   }
+  // }
+  
+
+
+
+
+
+
 
   Future<void> signOut() async {
     await firebaseAuth.signOut();

@@ -1,7 +1,7 @@
-import 'package:firbase_project/core/models/user_model.dart';
-import 'package:firbase_project/features/auth/presentation/view/pages/admin_login_screen.dart';
-import 'package:firbase_project/features/auth/presentation/view/pages/user_login_screen.dart';
-import 'package:firbase_project/features/auth/presentation/view_model/auth.cubit.dart';
+import 'package:app1/core/models/user_model.dart';
+import 'package:app1/features/auth/presentation/view/pages/admin_login_screen.dart';
+import 'package:app1/features/auth/presentation/view/pages/user_login_screen.dart';
+import 'package:app1/features/auth/presentation/view_model/auth.cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
@@ -9,7 +9,7 @@ class RoleCard extends StatelessWidget{
   final IconData icon;
   final String title;
   final String subtitle;
-  final Color iconColor;
+  // final Color iconColor;
   final UserRole role;
 
   const RoleCard({
@@ -17,7 +17,7 @@ class RoleCard extends StatelessWidget{
     required this.icon,
     required this.title,
     required this.subtitle,
-    required this.iconColor,
+    // required this.iconColor,
     required this.role,
   });
 
@@ -52,7 +52,7 @@ class RoleCard extends StatelessWidget{
             children: [
               Container(
                 padding: const EdgeInsets.all(12),
-                child: Icon(icon, size: 40, color: iconColor),
+                child: Icon(icon, size: 40, color: Colors.white),
               ),
               const SizedBox(width: 20),
               Expanded(

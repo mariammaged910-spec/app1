@@ -1,4 +1,4 @@
-import 'package:firbase_project/core/models/user_model.dart';
+import 'package:app1/core/models/user_model.dart';
 
 abstract class AuthState {}
 
