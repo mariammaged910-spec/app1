@@ -33,6 +33,7 @@ class HomeScreen extends StatelessWidget {
             ),
             TripCardHome(tripData[0]),
             TripCardHome(tripData[0]),
+
           ],
         ),
       ),
